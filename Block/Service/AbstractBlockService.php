@@ -16,7 +16,6 @@ use Sonata\BlockBundle\Model\BlockInterface;
 use Symfony\Bundle\FrameworkBundle\Templating\EngineInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 /**
  * @author Sullivan Senechal <soullivaneuh@gmail.com>
@@ -85,7 +84,7 @@ abstract class AbstractBlockService implements BlockServiceInterface
     /**
      * {@inheritdoc}
      */
-    public function setDefaultSettings(OptionsResolverInterface $resolver)
+    public function setDefaultSettings(OptionsResolver $resolver)
     {
         $this->configureSettings($resolver);
     }
