@@ -13,7 +13,7 @@ namespace Sonata\BlockBundle\Block;
 
 use Sonata\BlockBundle\Model\BlockInterface;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
  * Interface BlockServiceInterface.
@@ -42,13 +42,13 @@ interface BlockServiceInterface
      *
      * NEXT_MAJOR: rename this method.
      *
-     * @param OptionsResolverInterface $resolver
+     * @param OptionsResolver $resolver
      *
      * @deprecated since version 2.3, to be renamed in 4.0.
      *             Use the method configureSettings instead.
      *             This method will be added to the BlockServiceInterface with SonataBlockBundle 4.0
      */
-    public function setDefaultSettings(OptionsResolverInterface $resolver);
+    public function setDefaultSettings(OptionsResolver $resolver);
 
     /**
      * @param BlockInterface $block
